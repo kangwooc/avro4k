@@ -34,10 +34,11 @@ dependencies {
     api(libs.kotlinpoet) {
         exclude(module = "kotlin-reflect")
     }
-    api(project(":core"))
+    implementation(project(":core"))
 
     testImplementation(platform(libs.junit.bom))
     testImplementation(libs.kotest.core)
+    testImplementation(libs.kotest.junit5)
     testImplementation("org.junit.jupiter:junit-jupiter")
     testRuntimeOnly("org.junit.platform:junit-platform-launcher")
 
